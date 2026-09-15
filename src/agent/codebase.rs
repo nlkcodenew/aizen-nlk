@@ -1174,7 +1174,7 @@ fn finalize_regions(
             symbol_name: r.symbol_name,
             symbol_type: r.symbol_type.to_string(),
             parent_symbol: String::new(),
-            token_estimate: body.chars().count() / 4,
+            token_estimate: crate::core::tokens::estimate_str(&body),
             tokens,
             preview,
             content: body,
